@@ -1,0 +1,119 @@
+﻿<head>
+    <title>Compiler</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/codemirror-5.65.3/lib/codemirror.css">
+    <link rel="stylesheet" href="~/Content/codemirror-5.65.3/theme/darcula.css">
+    <script src="~/Content/codemirror-5.65.3/addon/comment/comment.js"></script>
+    <script src="~/Content/codemirror-5.65.3/lib/codemirror.js"></script>
+    <style>
+        body {
+            background-color: black;
+        }
+
+
+
+        .xx {
+            float: right;
+            width: 300px;
+        }
+
+
+
+
+
+        button,
+        label {
+            margin: 25px 0;
+            color: white;
+            font-size: 18px;
+        }
+
+
+
+        .editor {
+            height: 1000px
+        }
+
+
+
+        .h6 {
+            background-color: seagreen;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div validateRequest="false" class="container">
+        @using (Html.BeginForm("SaveRecord", "Token", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            <div>
+                <label for="file">
+                    <input class="browse" id="file" type="file" accept=".txt" name="browse">
+                </label>
+                <button class="xx btn btn-success" name="scan">Scan</button>
+            </div>
+<textarea style="height:600px; width:1140px; " name="content" class="editor"></textarea>
+        }
+        <div style="color:white;">
+            <div class="h6">
+                @if (ViewBag.Emp_data != null)
+                {
+                    foreach (var item in ViewBag.Emp_data)
+                    {
+                        <div>
+                            <h6> @item</h6>
+                        </div>
+
+
+
+                    }
+                }
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <script src="~/Scripts/script.js"></script>
+
+
+
+    <script>
+        input.addEventListener("input", myscript);
+
+
+
+        function myscript() {
+            // e.preventDefualt;
+
+
+
+            console.log("asda");
+        }
+        let editor = CodeMirror.fromTextArea(
+            document.getElementById("editor"), {
+                // theme: "darcula",
+                lineNumbers: true,
+            });
+        input.addEventListener("input", myscript);
+
+
+
+        function myscript() {
+            // e.preventDefualt;
+            console.log("asda");
+        }
+    </script>
+
+
+
+
+</body>

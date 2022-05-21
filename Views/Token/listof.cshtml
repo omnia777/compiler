@@ -1,0 +1,15 @@
+﻿@model WebApplication3.ViewModels.TokenViews
+
+@{
+    ViewBag.Title = "listof";
+}
+
+<h2>listof</h2>
+@Html.AntiForgeryToken()
+@foreach (var item in Model.tok)
+{
+    <div>
+        <h6> @item</h6>
+    </div>
+
+}
