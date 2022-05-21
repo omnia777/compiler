@@ -1,0 +1,4 @@
+/$This is main function $/
+Worthless decrease(){
+int 3num=5;
+Loopwhen(counter<num){
