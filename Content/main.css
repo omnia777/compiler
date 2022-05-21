@@ -1,0 +1,28 @@
+body {
+  background-color: #555;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+button,
+label {
+  background-color: rebeccapurple;
+  color: white;
+  border: none;
+  padding: 15px;
+  margin: 5px;
+  font-size: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.browse {
+  display: none;
+}
